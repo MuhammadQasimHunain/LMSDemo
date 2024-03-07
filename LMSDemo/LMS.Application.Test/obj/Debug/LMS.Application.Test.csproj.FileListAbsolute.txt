@@ -1,0 +1,15 @@
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\bin\Debug\LMS.Application.Test.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\bin\Debug\LMS.Application.Test.pdb
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\obj\Debug\LMS.Application.Test.csproj.AssemblyReference.cache
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\obj\Debug\LMS.Application.Test.csproj.CoreCompileInputs.cache
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\obj\Debug\LMS.Application.Test.csproj.CopyComplete
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\obj\Debug\LMS.Application.Test.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Application.Test\obj\Debug\LMS.Application.Test.pdb

@@ -1,0 +1,6 @@
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Domain.Test\bin\Debug\LMS.Domain.Test.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Domain.Test\bin\Debug\LMS.Domain.Test.pdb
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Domain.Test\obj\Debug\LMS.Domain.Test.csproj.AssemblyReference.cache
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Domain.Test\obj\Debug\LMS.Domain.Test.csproj.CoreCompileInputs.cache
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Domain.Test\obj\Debug\LMS.Domain.Test.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Domain.Test\obj\Debug\LMS.Domain.Test.pdb

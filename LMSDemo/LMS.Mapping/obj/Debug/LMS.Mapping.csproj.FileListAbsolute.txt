@@ -1,0 +1,6 @@
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Mapping\bin\Debug\LMS.Mapping.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Mapping\bin\Debug\LMS.Mapping.pdb
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Mapping\obj\Debug\LMS.Mapping.csproj.AssemblyReference.cache
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Mapping\obj\Debug\LMS.Mapping.csproj.CoreCompileInputs.cache
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Mapping\obj\Debug\LMS.Mapping.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Mapping\obj\Debug\LMS.Mapping.pdb

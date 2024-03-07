@@ -1,0 +1,218 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMSDemo\\LMSDemo.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Application\\LMS.Application.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Application\\LMS.Application.csproj",
+        "projectName": "LMS.Application",
+        "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Application\\LMS.Application.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Domain\\LMS.Domain.csproj": {
+                "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Domain\\LMS.Domain.csproj"
+              },
+              "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj": {
+                "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.DataAccess\\LMS.DataAccess.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.DataAccess\\LMS.DataAccess.csproj",
+        "projectName": "LMS.DataAccess",
+        "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.DataAccess\\LMS.DataAccess.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Logging\\LMS.Logging.csproj": {
+                "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Logging\\LMS.Logging.csproj"
+              },
+              "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Mapping\\LMS.Mapping.csproj": {
+                "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Mapping\\LMS.Mapping.csproj"
+              },
+              "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj": {
+                "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj"
+              },
+              "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Utils\\LMS.Utils.csproj": {
+                "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Utils\\LMS.Utils.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Domain\\LMS.Domain.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Domain\\LMS.Domain.csproj",
+        "projectName": "LMS.Domain",
+        "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Domain\\LMS.Domain.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.DataAccess\\LMS.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.DataAccess\\LMS.DataAccess.csproj"
+              },
+              "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj": {
+                "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Logging\\LMS.Logging.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Logging\\LMS.Logging.csproj",
+        "projectName": "LMS.Logging",
+        "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Logging\\LMS.Logging.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Mapping\\LMS.Mapping.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Mapping\\LMS.Mapping.csproj",
+        "projectName": "LMS.Mapping",
+        "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Mapping\\LMS.Mapping.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj",
+        "projectName": "LMS.Models",
+        "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Utils\\LMS.Utils.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Utils\\LMS.Utils.csproj",
+        "projectName": "LMS.Utils",
+        "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Utils\\LMS.Utils.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMSDemo\\LMSDemo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMSDemo\\LMSDemo.csproj",
+        "projectName": "LMSDemo",
+        "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMSDemo\\LMSDemo.csproj",
+        "packagesPath": "C:\\Users\\qasim.hunain\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMSDemo\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\qasim.hunain\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Application\\LMS.Application.csproj": {
+                "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Application\\LMS.Application.csproj"
+              },
+              "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj": {
+                "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj"
+              },
+              "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Utils\\LMS.Utils.csproj": {
+                "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Utils\\LMS.Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

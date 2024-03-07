@@ -1,0 +1,6 @@
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Logging\bin\Debug\LMS.Logging.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Logging\bin\Debug\LMS.Logging.pdb
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Logging\obj\Debug\LMS.Logging.csproj.AssemblyReference.cache
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Logging\obj\Debug\LMS.Logging.csproj.CoreCompileInputs.cache
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Logging\obj\Debug\LMS.Logging.dll
+C:\Users\qasim.hunain\source\repos\SchoolEnrollment\LMSDemo\LMS.Logging\obj\Debug\LMS.Logging.pdb
