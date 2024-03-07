@@ -11,8 +11,8 @@ namespace LMS.Application.LectureResource
     {
         IEnumerable<LectureResourceDBModel> GetLectureResources();
         bool InsertLectureResource(LectureResourceDBModel lectureResource);
-        LectureResourceDBModel GetLectureRoom(int id);
-        bool UpdateLectureRoom(LectureResourceDBModel lectureResource);
-        bool DeleteLectureRoom(int id);
+        LectureResourceDBModel GetLectureResource(int id);
+        bool UpdateLectureResource(LectureResourceDBModel lectureResource);
+        bool DeleteLectureResource(int id);
     }
 }

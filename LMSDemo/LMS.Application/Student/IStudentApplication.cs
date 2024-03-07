@@ -10,7 +10,7 @@ namespace LMS.Application.Student
     public interface IStudentApplication
     {
         IEnumerable<StudentDBModel> GetStudents();
-        bool InsertBlogStudent(StudentDBModel student);
+        bool InsertStudent(StudentDBModel student);
         StudentDBModel GetStudent(int id);
         bool UpdateStudent(StudentDBModel student);
         bool DeleteStudent(int id);

@@ -30,9 +30,9 @@ namespace LMS.Application.Course
             return CourseDomain.GetCourses();
         }
 
-        public bool InsertLectureResource(CourseDBModel course)
+        public bool InsertCourse(CourseDBModel course)
         {
-            return CourseDomain.InsertLectureResource(course);
+            return CourseDomain.InsertCourse(course);
         }
 
         public bool UpdateCourse(CourseDBModel course)

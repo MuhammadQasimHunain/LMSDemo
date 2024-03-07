@@ -31,9 +31,9 @@ namespace LMS.Application.Student
             return StudentDomain.GetStudents();
         }
 
-        public bool InsertBlogStudent(StudentDBModel student)
+        public bool InsertStudent(StudentDBModel student)
         {
-            return StudentDomain.InsertBlogStudent(student);
+            return StudentDomain.InsertStudent(student);
         }
 
         public bool UpdateStudent(StudentDBModel student)

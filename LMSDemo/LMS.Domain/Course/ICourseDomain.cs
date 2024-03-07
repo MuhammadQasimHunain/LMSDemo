@@ -10,7 +10,7 @@ namespace LMS.Domain.Course
     public interface ICourseDomain
     {
         IEnumerable<CourseDBModel> GetCourses();
-        bool InsertLectureResource(CourseDBModel course);
+        bool InsertCourse(CourseDBModel course);
         CourseDBModel GetCourse(int id);
         bool UpdateCourse(CourseDBModel course);
         bool DeleteCourse(int id);

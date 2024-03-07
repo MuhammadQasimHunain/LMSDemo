@@ -48,7 +48,7 @@ namespace LMS.Application.Student
                 StudentDBModel student = new StudentDBModel();
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
-                    string sqlQuery = SQLQueries.GetStudentByID + id;
+                    string sqlQuery = SQLQueries.GetStudentByID.Replace("@ID",id.ToString());
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
 
                     con.Open();
@@ -77,7 +77,7 @@ namespace LMS.Application.Student
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 SqlCommand cmd = new SqlCommand(SQLQueries.GetAllStudent, con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.Text;
 
                 con.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();
@@ -105,7 +105,7 @@ namespace LMS.Application.Student
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
                     SqlCommand cmd = new SqlCommand(SQLQueries.InsertStudent, con);
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.Text;
 
                     cmd.Parameters.AddWithValue("@FirstName", student.FirstName);
                     cmd.Parameters.AddWithValue("@LastName", student.LastName);
@@ -131,7 +131,7 @@ namespace LMS.Application.Student
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
                     SqlCommand cmd = new SqlCommand(SQLQueries.UpdateStudent, con);
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.Text;
 
                     cmd.Parameters.AddWithValue("@FirstName", student.FirstName);
                     cmd.Parameters.AddWithValue("@LastName", student.LastName);

@@ -30,7 +30,7 @@ namespace LMS.Domain.Student
             return this.StudentDataService.GetStudents();
         }
 
-        public bool InsertBlogStudent(StudentDBModel student)
+        public bool InsertStudent(StudentDBModel student)
         {
             return this.StudentDataService.InsertStudent(student);
         }

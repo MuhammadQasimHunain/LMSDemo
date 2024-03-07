@@ -48,7 +48,7 @@ namespace LMS.Application.LectureRoom
                 LectureRoomDBModel lectureRoom = new LectureRoomDBModel();
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
-                    string sqlQuery = SQLQueries.GetLectureRoomByID + id;
+                    string sqlQuery = SQLQueries.GetLectureRoomByID.Replace("@ID",id.ToString());
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
 
                     con.Open();
@@ -75,7 +75,7 @@ namespace LMS.Application.LectureRoom
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 SqlCommand cmd = new SqlCommand(SQLQueries.GetAllLectureRoom, con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.Text;
 
                 con.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();
@@ -85,7 +85,7 @@ namespace LMS.Application.LectureRoom
                     LectureRoomDBModel lectureRoom = new LectureRoomDBModel();
 
                     lectureRoom.ID = Convert.ToInt32(rdr["ID"]);
-                    lectureRoom.Name = rdr["Extension"].ToString();
+                    lectureRoom.Name = rdr["Name"].ToString();
 
                     lstLectureRooms.Add(lectureRoom);
                 }
@@ -101,7 +101,7 @@ namespace LMS.Application.LectureRoom
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
                     SqlCommand cmd = new SqlCommand(SQLQueries.InsertLectureRoom, con);
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.Text;
 
                     cmd.Parameters.AddWithValue("@Name", lectureRoom.Name);
 
@@ -125,7 +125,7 @@ namespace LMS.Application.LectureRoom
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
                     SqlCommand cmd = new SqlCommand(SQLQueries.InsertLectureRoom, con);
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.Text;
 
                     cmd.Parameters.AddWithValue("@Name", lectureRoom.Name);
                     cmd.Parameters.AddWithValue("@ID", lectureRoom.ID);

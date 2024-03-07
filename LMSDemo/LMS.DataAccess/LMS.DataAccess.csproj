@@ -41,6 +41,9 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +54,8 @@
   <ItemGroup>
     <Compile Include="Course\CourseDataService.cs" />
     <Compile Include="Course\ICourseDataService.cs" />
+    <Compile Include="Enrollment\EnrollmentDataService.cs" />
+    <Compile Include="Enrollment\IEnrollmentDataService.cs" />
     <Compile Include="LectureResource\ILectureResourceDataService.cs" />
     <Compile Include="LectureResource\LectureResourceDataService.cs" />
     <Compile Include="LectureRoom\ILectureRoomDataService.cs" />
@@ -80,6 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

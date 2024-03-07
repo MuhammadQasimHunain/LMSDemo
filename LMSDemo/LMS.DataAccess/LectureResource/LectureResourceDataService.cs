@@ -18,7 +18,7 @@ namespace LMS.Application.LectureResource
         {
             this.ConnectionString = Configuration.GetDBConfiguration();
         }
-        public bool DeleteLectureRoom(int id)
+        public bool DeleteLectureResource(int id)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace LMS.Application.LectureResource
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 SqlCommand cmd = new SqlCommand(SQLQueries.GetAllLectureResource, con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.Text;
 
                 con.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();
@@ -69,14 +69,14 @@ namespace LMS.Application.LectureResource
             return lstLectureResources;
         }
 
-        public LectureResourceDBModel GetLectureRoom(int id)
+        public LectureResourceDBModel GetLectureResource(int id)
         {
             try
             {
                 LectureResourceDBModel lectureResource = new LectureResourceDBModel();
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
-                    string sqlQuery = SQLQueries.GetLectureResourceByID + id;
+                    string sqlQuery = SQLQueries.GetLectureResourceByID.Replace("@ID",id.ToString());
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
 
                     con.Open();
@@ -105,7 +105,7 @@ namespace LMS.Application.LectureResource
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
                     SqlCommand cmd = new SqlCommand(SQLQueries.InsertLectureResource, con);
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.Text;
 
                     cmd.Parameters.AddWithValue("@Extension", lectureResource.Extension);
                     cmd.Parameters.AddWithValue("@Resource", lectureResource.Resource);
@@ -124,14 +124,14 @@ namespace LMS.Application.LectureResource
             }
         }
 
-        public bool UpdateLectureRoom(LectureResourceDBModel lectureResource)
+        public bool UpdateLectureResource(LectureResourceDBModel lectureResource)
         {
             try
             {
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
                     SqlCommand cmd = new SqlCommand(SQLQueries.InsertLectureResource, con);
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.Text;
 
                     cmd.Parameters.AddWithValue("@Extension", lectureResource.Extension);
                     cmd.Parameters.AddWithValue("@Resource", lectureResource.Resource);

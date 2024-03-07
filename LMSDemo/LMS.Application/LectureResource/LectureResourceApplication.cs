@@ -15,9 +15,9 @@ namespace LMS.Application.LectureResource
         {
             LectureResourceDomain = lectureResourceDomain;
         }
-        public bool DeleteLectureRoom(int id)
+        public bool DeleteLectureResource(int id)
         {
-            return LectureResourceDomain.DeleteLectureRoom(id);
+            return LectureResourceDomain.DeleteLectureResource(id);
         }
 
         public IEnumerable<LectureResourceDBModel> GetLectureResources()
@@ -25,9 +25,9 @@ namespace LMS.Application.LectureResource
             return LectureResourceDomain.GetLectureResources();
         }
 
-        public LectureResourceDBModel GetLectureRoom(int id)
+        public LectureResourceDBModel GetLectureResource(int id)
         {
-            return LectureResourceDomain.GetLectureRoom(id);
+            return LectureResourceDomain.GetLectureResource(id);
         }
 
         public bool InsertLectureResource(LectureResourceDBModel lectureResource)
@@ -35,9 +35,9 @@ namespace LMS.Application.LectureResource
             return LectureResourceDomain.InsertLectureResource(lectureResource);
         }
 
-        public bool UpdateLectureRoom(LectureResourceDBModel lectureResource)
+        public bool UpdateLectureResource(LectureResourceDBModel lectureResource)
         {
-            return LectureResourceDomain.UpdateLectureRoom(lectureResource);
+            return LectureResourceDomain.UpdateLectureResource(lectureResource);
         }
     }
 }

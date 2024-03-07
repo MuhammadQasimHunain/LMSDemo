@@ -1,7 +1,9 @@
 ﻿using LMS.Application.Course;
+using LMS.Models.DataModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using System.Reflection;
 
 namespace LMSDemo.Controllers
 {
@@ -37,5 +39,98 @@ namespace LMSDemo.Controllers
                 });
             }
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetCourseByID(int id)
+        {
+            try
+            {
+                var courses = CourseApplication.GetCourse(id);
+
+                return StatusCode((int)HttpStatusCode.OK, new
+                {
+                    Status = 1,
+                    Data = courses
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.OK, new
+                {
+                    Status = 0,
+                    ex.Message
+                });
+            }
+        }
+
+        [HttpPut]
+        public IActionResult UpdateCourse(CourseDBModel model)
+        {
+            try
+            {
+                var courses = CourseApplication.UpdateCourse(model);
+
+                return StatusCode((int)HttpStatusCode.OK, new
+                {
+                    Status = 1,
+                    Data = courses
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.OK, new
+                {
+                    Status = 0,
+                    ex.Message
+                });
+            }
+        }
+
+        [HttpPost]
+        public IActionResult InsertCourse(CourseDBModel model)
+        {
+            try
+            {
+                var courses = CourseApplication.InsertCourse(model);
+
+                return StatusCode((int)HttpStatusCode.OK, new
+                {
+                    Status = 1,
+                    Data = courses
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.OK, new
+                {
+                    Status = 0,
+                    ex.Message
+                });
+            }
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteCourse(int id)
+        {
+            try
+            {
+                var courses = CourseApplication.DeleteCourse(id);
+
+                return StatusCode((int)HttpStatusCode.OK, new
+                {
+                    Status = 1,
+                    Data = courses
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.OK, new
+                {
+                    Status = 0,
+                    ex.Message
+                });
+            }
+        }
+
     }
 }

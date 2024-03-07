@@ -48,8 +48,9 @@ namespace LMS.Application.Course
                 CourseDBModel course = new CourseDBModel();
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
-                    string sqlQuery = SQLQueries.GetCourseByID + id;
+                    string sqlQuery = SQLQueries.GetCourseByID.Replace("@ID",id.ToString());
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                    cmd.CommandType = CommandType.Text;
 
                     con.Open();
                     SqlDataReader rdr = cmd.ExecuteReader();
@@ -78,7 +79,7 @@ namespace LMS.Application.Course
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 SqlCommand cmd = new SqlCommand(SQLQueries.GetAllCourses, con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.Text;
 
                 con.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();
@@ -99,15 +100,16 @@ namespace LMS.Application.Course
             return lstcourse;
         }
 
-        public bool InsertLectureResource(CourseDBModel course)
+        public bool InsertCourse(CourseDBModel course)
         {
             try
             {
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
                     SqlCommand cmd = new SqlCommand(SQLQueries.InsertCourse, con);
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.Text;
 
+                    cmd.Parameters.AddWithValue("@ID", course.ID);
                     cmd.Parameters.AddWithValue("@Name", course.Name);
                     cmd.Parameters.AddWithValue("@Semester", course.Semester);
                     cmd.Parameters.AddWithValue("@CreditUnits", course.CreditUnits);
@@ -132,7 +134,7 @@ namespace LMS.Application.Course
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
                     SqlCommand cmd = new SqlCommand(SQLQueries.UpdateCourse, con);
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.Text;
 
                     cmd.Parameters.AddWithValue("@Name", course.Name);
                     cmd.Parameters.AddWithValue("@Semester", course.Semester);
