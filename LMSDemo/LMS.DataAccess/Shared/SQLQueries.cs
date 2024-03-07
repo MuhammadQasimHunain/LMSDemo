@@ -54,11 +54,13 @@ namespace LMS.DataAccess.Shared
 
 
         #region Enrollments Queries
-        public static string GetAllEnrollments = "SELECT [ID],[CourseID],[Resource],[Extension] FROM [FlexiSchool].[flexiSchoolUser].[LectureResource]";
-        public static string UpdateEnrollment = "";
-        public static string DeleteEnrollment = "";
-        public static string GetEnrollmentByID = "";
-        public static string InsertEnrollment = "";
+        public static string GetAllEnrollments = "SELECT [StudentID],[CourseID],[GradeID],[ID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]";
+        public static string UpdateEnrollment = "UPDATE [flexiSchoolUser].[Enrollment] SET [CourseID] = @CourseID,[StudentID] = @StudentID,[GradeID] = @GradeID WHERE ID = @ID";
+        public static string DeleteEnrollment = "DELETE [flexiSchoolUser].[LectureResource] WHERE ID = @ID";
+        public static string GetEnrollmentByID = "SELECT [StudentID],[CourseID],[GradeID],[ID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]  WHERE ID = @ID";
+        public static string GetEnrollmentByCourse = "SELECT [StudentID],[CourseID],[GradeID],[ID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]  WHERE CourseID = @ID";
+        public static string GetEnrollmentByStudent = "SELECT [StudentID],[CourseID],[GradeID],[ID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]  WHERE StudentID = @ID";
+        public static string InsertEnrollment = "INSERT INTO [flexiSchoolUser].[Enrollment] ([CourseID],[StudentID],[GradeID]) VALUES (@CourseID,@StudentID,@GradeID)";
 
 
         #endregion

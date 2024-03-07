@@ -1,8 +1,11 @@
 using LMS.Application.Course;
+using LMS.Application.Enrollment;
 using LMS.Application.LectureResource;
 using LMS.Application.LectureRoom;
 using LMS.Application.Student;
+using LMS.DataAccess.Enrollment;
 using LMS.Domain.Course;
+using LMS.Domain.Enrollment;
 using LMS.Domain.LectureResource;
 using LMS.Domain.LectureRoom;
 using LMS.Domain.Student;
@@ -18,17 +21,20 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IStudentApplication, StudentApplication>();
 builder.Services.AddTransient<ICourseApplication, CourseApplication>();
 builder.Services.AddTransient<ILectureResourceApplication, LectureResourceApplication>();
+builder.Services.AddTransient<IEnrollmentApplication, EnrollmentApplication>();
 builder.Services.AddTransient<ILectureRoomApplication, LectureRoomApplication>();
 
 builder.Services.AddTransient<IStudentDomain, StudentDomain>();
 builder.Services.AddTransient<ICourseDomain, CourseDomain>();
 builder.Services.AddTransient<ILectureResourceDomain, LectureResourceDomain>();
+builder.Services.AddTransient<IEnrollmentDomain, EnrollmentDomain>();
 builder.Services.AddTransient<ILectureRoomDomain, LectureRoomDomain>();
 
 
 builder.Services.AddTransient<IStudentDataService, StudentDataService>();
 builder.Services.AddTransient<ICourseDataService, CourseDataService>();
 builder.Services.AddTransient<ILectureResourceDataService, LectureResourceDataService>();
+builder.Services.AddTransient<IEnrollmentDataService, EnrollmentDataService>();
 builder.Services.AddTransient<ILectureRoomDataService, LectureRoomDataService>();
 
 var app = builder.Build();

@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Course\CourseApplication.cs" />
     <Compile Include="Course\ICourseApplication.cs" />
+    <Compile Include="Enrollment\EnrollmentApplication.cs" />
+    <Compile Include="Enrollment\IEnrollmentApplication.cs" />
     <Compile Include="LectureResource\ILectureResourceApplication.cs" />
     <Compile Include="LectureResource\LectureResourceApplication.cs" />
     <Compile Include="LectureRoom\ILectureRoomApplication.cs" />
@@ -62,8 +64,6 @@
       <Name>LMS.Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enrollment\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

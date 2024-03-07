@@ -73,13 +73,69 @@ namespace LMS.DataAccess.Enrollment
             }
         }
 
+        public IEnumerable<EnrollmentDBModel> GetEnrollmentByCources(int id)
+        {
+            List<EnrollmentDBModel> lstEnrollmenets = new List<EnrollmentDBModel>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(SQLQueries.GetEnrollmentByCourse.Replace("@ID",id.ToString()), con);
+                cmd.CommandType = CommandType.Text;
+
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    EnrollmentDBModel enrollment = new EnrollmentDBModel();
+
+                    enrollment.ID = Convert.ToInt32(rdr["ID"]);
+                    enrollment.StudentID = Convert.ToInt32(rdr["StudentID"]);
+                    enrollment.CourseID = Convert.ToInt32(rdr["CourseID"].ToString());
+                    enrollment.GradeID = Convert.ToInt32(rdr["GradeID"].ToString());
+
+                    lstEnrollmenets.Add(enrollment);
+                }
+                con.Close();
+            }
+            return lstEnrollmenets;
+        }
+
+        public IEnumerable<EnrollmentDBModel> GetEnrollmentByStudent(int id)
+        {
+            List<EnrollmentDBModel> lstEnrollmenets = new List<EnrollmentDBModel>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(SQLQueries.GetEnrollmentByStudent.Replace("@ID", id.ToString()), con);
+                cmd.CommandType = CommandType.Text;
+
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    EnrollmentDBModel enrollment = new EnrollmentDBModel();
+
+                    enrollment.ID = Convert.ToInt32(rdr["ID"]);
+                    enrollment.StudentID = Convert.ToInt32(rdr["StudentID"]);
+                    enrollment.CourseID = Convert.ToInt32(rdr["CourseID"].ToString());
+                    enrollment.GradeID = Convert.ToInt32(rdr["GradeID"].ToString());
+
+                    lstEnrollmenets.Add(enrollment);
+                }
+                con.Close();
+            }
+            return lstEnrollmenets;
+        }
+
         public IEnumerable<EnrollmentDBModel> GetEnrollments()
         {
             List<EnrollmentDBModel> lstEnrollmenets = new List<EnrollmentDBModel>();
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
-                SqlCommand cmd = new SqlCommand(SQLQueries.GetAllCourses, con);
+                SqlCommand cmd = new SqlCommand(SQLQueries.GetAllEnrollments, con);
                 cmd.CommandType = CommandType.Text;
 
                 con.Open();
@@ -107,7 +163,7 @@ namespace LMS.DataAccess.Enrollment
             {
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
-                    SqlCommand cmd = new SqlCommand(SQLQueries.InsertCourse, con);
+                    SqlCommand cmd = new SqlCommand(SQLQueries.InsertEnrollment, con);
                     cmd.CommandType = CommandType.Text;
 
                     cmd.Parameters.AddWithValue("@StudentID", enrollment.StudentID);

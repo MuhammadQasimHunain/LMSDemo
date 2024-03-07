@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LMS.DataAccess.Enrollment
+namespace LMS.Domain.Enrollment
 {
-    public interface IEnrollmentDataService
+    public interface IEnrollmentDomain
     {
         IEnumerable<EnrollmentDBModel> GetEnrollments();
         bool InsertEnrollment(EnrollmentDBModel enrollment);
