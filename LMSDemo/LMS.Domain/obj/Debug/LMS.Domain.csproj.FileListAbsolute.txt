@@ -20,3 +20,5 @@ C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.Domain\obj\Debug\LMS.Domain.
 C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.Domain\obj\Debug\LMS.Domain.csproj.CopyComplete
 C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.Domain\obj\Debug\LMS.Domain.dll
 C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.Domain\obj\Debug\LMS.Domain.pdb
+C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.Domain\bin\Debug\LMS.Utils.dll
+C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.Domain\bin\Debug\LMS.Utils.pdb

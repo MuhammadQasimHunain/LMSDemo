@@ -35,7 +35,7 @@ namespace LMS.Application.LectureRoom
             return LectureRoomDomain.InsertLectureRoom(lectureRoom);
         }
 
-        public bool UpdateLectureRoom(StudentDBModel lectureRoom)
+        public bool UpdateLectureRoom(LectureRoomDBModel lectureRoom)
         {
             return LectureRoomDomain.UpdateLectureRoom(lectureRoom);
         }

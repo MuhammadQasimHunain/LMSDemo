@@ -57,7 +57,7 @@ namespace LMS.Application.Course
                     while (rdr.Read())
                     {
 
-                        course.ID = Convert.ToInt32(rdr["EmployeeID"]);
+                        course.ID = Convert.ToInt32(rdr["ID"]);
                         course.Name = rdr["Name"].ToString();
                         course.CreditUnits = Convert.ToInt32(rdr["CreditUnits"].ToString());
                         course.Semester = Convert.ToInt32(rdr["Semester"].ToString());
@@ -87,7 +87,7 @@ namespace LMS.Application.Course
                 {
                     CourseDBModel course = new CourseDBModel();
 
-                    course.ID = Convert.ToInt32(rdr["EmployeeID"]);
+                    course.ID = Convert.ToInt32(rdr["ID"]);
                     course.Name = rdr["Name"].ToString();
                     course.CreditUnits = Convert.ToInt32(rdr["CreditUnits"].ToString());
                     course.Semester = Convert.ToInt32(rdr["Semester"].ToString());

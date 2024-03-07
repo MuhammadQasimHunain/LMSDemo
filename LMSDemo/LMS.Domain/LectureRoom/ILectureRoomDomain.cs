@@ -12,7 +12,7 @@ namespace LMS.Domain.LectureRoom
         IEnumerable<LectureRoomDBModel> GetLectureRoom();
         bool InsertLectureRoom(LectureRoomDBModel lectureRoom);
         LectureRoomDBModel GetLectureRoom(int id);
-        bool UpdateLectureRoom(StudentDBModel lectureRoom);
+        bool UpdateLectureRoom(LectureRoomDBModel lectureRoom);
         bool DeleteLectureRoom(int id);
     }
 }
