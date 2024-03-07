@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMSDemo", "LMSDemo\LMSDemo.csproj", "{2EECC47C-3497-4146-9723-AA4678914E40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LMSDemo", "LMSDemo\LMSDemo.csproj", "{2EECC47C-3497-4146-9723-AA4678914E40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B9A5E9F0-8DBB-4F9C-AA2F-4966DF4FA7F6}"
 EndProject

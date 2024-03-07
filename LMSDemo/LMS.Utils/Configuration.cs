@@ -11,7 +11,7 @@ namespace LMS.Utils
 
         public static string GetDBConfiguration()
         {
-            return "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=CoreDB;Data Source=DELL";
+            return "Server=P3NWPLSK12SQL-v13.shr.prod.phx3.secureserver.net;Database=FlexiSchool;User Id=flexiSchoolUser;Password=t18q^tR07;";
         }
     }
 }

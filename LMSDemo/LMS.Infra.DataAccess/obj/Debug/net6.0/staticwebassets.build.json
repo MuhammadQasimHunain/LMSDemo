@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "QRSM1uCA4AMSuK2CMloPN1kd8NSXlEPeQo4nbJyis54=",
+  "Source": "LMS.Infra.DataAccess",
+  "BasePath": "_content/LMS.Infra.DataAccess",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

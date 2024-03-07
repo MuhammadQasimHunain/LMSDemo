@@ -9,7 +9,7 @@ namespace LMS.DataAccess.Shared
     public static class SQLQueries
     {
         #region Course Queries
-        public static string GetAllCourses = "";
+        public static string GetAllCourses = "SELECT [ID],[Name],[Semester],[CreditUnits] FROM [FlexiSchool].[flexiSchoolUser].[Course]";
         public static string UpdateCourse = "";
         public static string DeleteCourse = "";
         public static string GetCourseByID= "";
@@ -19,7 +19,7 @@ namespace LMS.DataAccess.Shared
         #endregion
 
         #region Student Queries
-        public static string GetAllStudent = "";
+        public static string GetAllStudent = "SELECT [ID],[FirstName],[LastName],[Phone] FROM [FlexiSchool].[flexiSchoolUser].[Student]";
         public static string UpdateStudent = "";
         public static string DeleteStudent = "";
         public static string GetStudentByID = "";
@@ -30,7 +30,7 @@ namespace LMS.DataAccess.Shared
 
 
         #region Lecture Room Queries
-        public static string GetAllLectureRoom = "";
+        public static string GetAllLectureRoom = "SELECT [ID],[Name] FROM [FlexiSchool].[flexiSchoolUser].[LectureRoom]";
         public static string UpdateLectureRoom = "";
         public static string DeleteLectureRoom = "";
         public static string GetLectureRoomByID = "";
@@ -42,7 +42,7 @@ namespace LMS.DataAccess.Shared
 
 
         #region Lecture Resource Queries
-        public static string GetAllLectureResource = "";
+        public static string GetAllLectureResource = "SELECT [ID],[CourseID],[Resource],[Extension] FROM [FlexiSchool].[flexiSchoolUser].[LectureResource]";
         public static string UpdateLectureResource = "";
         public static string DeleteLectureResource = "";
         public static string GetLectureResourceByID = "";
