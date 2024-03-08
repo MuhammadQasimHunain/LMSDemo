@@ -15,5 +15,6 @@ namespace LMS.Models.DataModels
         public int StudentID { get; set; }
         public int CourseID { get; set; }
         public int GradeID { get; set; }
+        public int LectureRoomID { get; set; }
     }
 }

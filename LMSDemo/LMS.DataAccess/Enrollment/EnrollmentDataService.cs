@@ -63,6 +63,7 @@ namespace LMS.DataAccess.Enrollment
                         enrollment.StudentID = Convert.ToInt32(rdr["StudentID"]);
                         enrollment.CourseID = Convert.ToInt32(rdr["CourseID"].ToString());
                         enrollment.GradeID = Convert.ToInt32(rdr["GradeID"].ToString());
+                        enrollment.LectureRoomID = Convert.ToInt32(rdr["LectureRoomID"].ToString());
                     }
                 }
                 return enrollment;
@@ -93,7 +94,37 @@ namespace LMS.DataAccess.Enrollment
                     enrollment.StudentID = Convert.ToInt32(rdr["StudentID"]);
                     enrollment.CourseID = Convert.ToInt32(rdr["CourseID"].ToString());
                     enrollment.GradeID = Convert.ToInt32(rdr["GradeID"].ToString());
+                    enrollment.LectureRoomID = Convert.ToInt32(rdr["LectureRoomID"].ToString());
 
+                    lstEnrollmenets.Add(enrollment);
+                }
+                con.Close();
+            }
+            return lstEnrollmenets;
+        }
+
+        public IEnumerable<EnrollmentDBModel> GetEnrollmentByLectureRoom(int id)
+        {
+            List<EnrollmentDBModel> lstEnrollmenets = new List<EnrollmentDBModel>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(SQLQueries.GetEnrollmentByLectureRoomID.Replace("@ID", id.ToString()), con);
+                cmd.CommandType = CommandType.Text;
+
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    EnrollmentDBModel enrollment = new EnrollmentDBModel();
+
+                    enrollment.ID = Convert.ToInt32(rdr["ID"]);
+                    enrollment.StudentID = Convert.ToInt32(rdr["StudentID"]);
+                    enrollment.CourseID = Convert.ToInt32(rdr["CourseID"].ToString());
+                    enrollment.GradeID = Convert.ToInt32(rdr["GradeID"].ToString());
+                    enrollment.LectureRoomID = Convert.ToInt32(rdr["LectureRoomID"].ToString());
+                    
                     lstEnrollmenets.Add(enrollment);
                 }
                 con.Close();
@@ -121,6 +152,7 @@ namespace LMS.DataAccess.Enrollment
                     enrollment.StudentID = Convert.ToInt32(rdr["StudentID"]);
                     enrollment.CourseID = Convert.ToInt32(rdr["CourseID"].ToString());
                     enrollment.GradeID = Convert.ToInt32(rdr["GradeID"].ToString());
+                    enrollment.LectureRoomID = Convert.ToInt32(rdr["LectureRoomID"].ToString());
 
                     lstEnrollmenets.Add(enrollment);
                 }
@@ -149,6 +181,7 @@ namespace LMS.DataAccess.Enrollment
                     enrollment.StudentID = Convert.ToInt32(rdr["StudentID"]);
                     enrollment.CourseID = Convert.ToInt32(rdr["CourseID"].ToString());
                     enrollment.GradeID = Convert.ToInt32(rdr["GradeID"].ToString());
+                    enrollment.LectureRoomID = Convert.ToInt32(rdr["LectureRoomID"].ToString());
 
                     lstEnrollmenets.Add(enrollment);
                 }
@@ -168,6 +201,7 @@ namespace LMS.DataAccess.Enrollment
 
                     cmd.Parameters.AddWithValue("@StudentID", enrollment.StudentID);
                     cmd.Parameters.AddWithValue("@CourseID", enrollment.CourseID);
+                    cmd.Parameters.AddWithValue("@LectureRoomID", enrollment.LectureRoomID);
                     cmd.Parameters.AddWithValue("@GradeID", enrollment.GradeID);
 
                     con.Open();
@@ -195,6 +229,7 @@ namespace LMS.DataAccess.Enrollment
                     cmd.Parameters.AddWithValue("@StudentID", enrollment.StudentID);
                     cmd.Parameters.AddWithValue("@CourseID", enrollment.CourseID);
                     cmd.Parameters.AddWithValue("@GradeID", enrollment.GradeID);
+                    cmd.Parameters.AddWithValue("@LectureRoomID", enrollment.LectureRoomID);
                     cmd.Parameters.AddWithValue("@ID", enrollment.ID);
 
                     con.Open();

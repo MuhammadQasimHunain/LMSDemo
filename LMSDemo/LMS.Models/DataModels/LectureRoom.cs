@@ -13,6 +13,7 @@ namespace LMS.Models.DataModels
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public int Capaicty { get; set; }
 
     }
 }

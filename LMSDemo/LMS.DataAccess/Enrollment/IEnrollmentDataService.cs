@@ -14,6 +14,7 @@ namespace LMS.DataAccess.Enrollment
         EnrollmentDBModel GetEnrollment(int id);
         IEnumerable<EnrollmentDBModel> GetEnrollmentByCources(int id);
         IEnumerable<EnrollmentDBModel> GetEnrollmentByStudent(int id);
+        IEnumerable<EnrollmentDBModel> GetEnrollmentByLectureRoom(int id);
         bool UpdateEnrollment(EnrollmentDBModel enrollment);
         bool DeleteEnrollment(int id);
     }

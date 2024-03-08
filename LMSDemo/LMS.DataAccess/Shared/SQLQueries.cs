@@ -30,11 +30,11 @@ namespace LMS.DataAccess.Shared
 
 
         #region Lecture Room Queries
-        public static string GetAllLectureRoom  = "SELECT [ID],[Name] FROM [FlexiSchool].[flexiSchoolUser].[LectureRoom]";
-        public static string UpdateLectureRoom  = "UPDATE [flexiSchoolUser].[LectureRoom] SET [Name] = @Name WHERE ID = @ID";
+        public static string GetAllLectureRoom  = "SELECT [ID],[Name],[Capaicty] FROM [FlexiSchool].[flexiSchoolUser].[LectureRoom]";
+        public static string UpdateLectureRoom  = "UPDATE [flexiSchoolUser].[LectureRoom] SET [Name],[Capaicty] = @Name WHERE ID = @ID";
         public static string DeleteLectureRoom  = "DELETE [flexiSchoolUser].[LectureRoom] WHERE ID = @ID";
-        public static string GetLectureRoomByID = "SELECT [ID],[Name] FROM [FlexiSchool].[flexiSchoolUser].[LectureRoom] WHERE ID = @ID";
-        public static string InsertLectureRoom  = "INSERT INTO [flexiSchoolUser].[LectureRoom] ([Name]) VALUES (@Name)";
+        public static string GetLectureRoomByID = "SELECT [ID],[Name],[Capaicty] FROM [FlexiSchool].[flexiSchoolUser].[LectureRoom] WHERE ID = @ID";
+        public static string InsertLectureRoom  = "INSERT INTO [flexiSchoolUser].[LectureRoom] ([Name],[Capaicty]) VALUES (@Name,@Capaicty)";
 
 
         #endregion
@@ -54,13 +54,14 @@ namespace LMS.DataAccess.Shared
 
 
         #region Enrollments Queries
-        public static string GetAllEnrollments = "SELECT [StudentID],[CourseID],[GradeID],[ID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]";
+        public static string GetAllEnrollments = "SELECT [StudentID],[CourseID],[GradeID],[ID],[LectureRoomID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]";
         public static string UpdateEnrollment = "UPDATE [flexiSchoolUser].[Enrollment] SET [CourseID] = @CourseID,[StudentID] = @StudentID,[GradeID] = @GradeID WHERE ID = @ID";
         public static string DeleteEnrollment = "DELETE [flexiSchoolUser].[LectureResource] WHERE ID = @ID";
-        public static string GetEnrollmentByID = "SELECT [StudentID],[CourseID],[GradeID],[ID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]  WHERE ID = @ID";
-        public static string GetEnrollmentByCourse = "SELECT [StudentID],[CourseID],[GradeID],[ID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]  WHERE CourseID = @ID";
-        public static string GetEnrollmentByStudent = "SELECT [StudentID],[CourseID],[GradeID],[ID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]  WHERE StudentID = @ID";
-        public static string InsertEnrollment = "INSERT INTO [flexiSchoolUser].[Enrollment] ([CourseID],[StudentID],[GradeID]) VALUES (@CourseID,@StudentID,@GradeID)";
+        public static string GetEnrollmentByID = "SELECT [StudentID],[CourseID],[GradeID],[ID],[LectureRoomID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]  WHERE ID = @ID";
+        public static string GetEnrollmentByCourse = "SELECT [StudentID],[CourseID],[GradeID],[ID],[LectureRoomID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]  WHERE CourseID = @ID";
+        public static string GetEnrollmentByLectureRoomID = "SELECT [StudentID],[CourseID],[GradeID],[ID],[LectureRoomID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]  WHERE LectureRoomID = @ID";
+        public static string GetEnrollmentByStudent = "SELECT [StudentID],[CourseID],[GradeID],[ID],[LectureRoomID] FROM [FlexiSchool].[flexiSchoolUser].[Enrollment]  WHERE StudentID = @ID";
+        public static string InsertEnrollment = "INSERT INTO [flexiSchoolUser].[Enrollment] ([CourseID],[StudentID],[GradeID],[LectureRoomID]) VALUES (@CourseID,@StudentID,@GradeID,@LectureRoomID)";
 
 
         #endregion

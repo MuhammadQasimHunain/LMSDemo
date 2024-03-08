@@ -58,6 +58,7 @@ namespace LMS.Application.LectureRoom
                     {
                         lectureRoom.ID = Convert.ToInt32(rdr["ID"]);
                         lectureRoom.Name = rdr["Name"].ToString();
+                        lectureRoom.Capaicty = Convert.ToInt32(rdr["Capaicty"]);
                     }
                 }
                 return lectureRoom;
@@ -86,6 +87,7 @@ namespace LMS.Application.LectureRoom
 
                     lectureRoom.ID = Convert.ToInt32(rdr["ID"]);
                     lectureRoom.Name = rdr["Name"].ToString();
+                    lectureRoom.Capaicty = Convert.ToInt32(rdr["Capaicty"]);
 
                     lstLectureRooms.Add(lectureRoom);
                 }
@@ -104,7 +106,7 @@ namespace LMS.Application.LectureRoom
                     cmd.CommandType = CommandType.Text;
 
                     cmd.Parameters.AddWithValue("@Name", lectureRoom.Name);
-
+                    cmd.Parameters.AddWithValue("@Capaicty", lectureRoom.Capaicty);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -129,6 +131,7 @@ namespace LMS.Application.LectureRoom
 
                     cmd.Parameters.AddWithValue("@Name", lectureRoom.Name);
                     cmd.Parameters.AddWithValue("@ID", lectureRoom.ID);
+                    cmd.Parameters.AddWithValue("@Capaicty", lectureRoom.Capaicty);
 
                     con.Open();
                     cmd.ExecuteNonQuery();

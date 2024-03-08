@@ -1,5 +1,7 @@
 ﻿using LMS.Application.Course;
+using LMS.Application.LectureRoom;
 using LMS.DataAccess.Enrollment;
+using LMS.Domain.LectureRoom;
 using LMS.Models.DataModels;
 using System;
 using System.Collections.Generic;
@@ -12,9 +14,11 @@ namespace LMS.Domain.Enrollment
     public class EnrollmentDomain : IEnrollmentDomain
     {
         public IEnrollmentDataService EnrollmentDataService { get; set; }
-        public EnrollmentDomain(IEnrollmentDataService enrollmentDataService)
+        public ILectureRoomDataService LectureRoomDataService { get; set; }
+        public EnrollmentDomain(IEnrollmentDataService enrollmentDataService, ILectureRoomDataService lectureRoomDataService)
         {
             EnrollmentDataService = enrollmentDataService;
+            LectureRoomDataService = lectureRoomDataService;
         }
         public bool DeleteEnrollment(int id)
         {
@@ -43,6 +47,17 @@ namespace LMS.Domain.Enrollment
 
         public bool InsertEnrollment(EnrollmentDBModel enrollment)
         {
+            var enrolledStudents = EnrollmentDataService.GetEnrollmentByCources(enrollment.CourseID).Count();
+            var lectureRoomCapasity = LectureRoomDataService.GetLectureRoom(enrollment.LectureRoomID).Capaicty;
+            var enrollSubjectByStudent = EnrollmentDataService.GetEnrollmentByStudent(enrollment.StudentID).Count();
+            if (enrolledStudents >= lectureRoomCapasity)
+            {
+                return false;
+            }
+            if (enrollSubjectByStudent >= 10)
+            {
+                return false;
+            }
             return EnrollmentDataService.InsertEnrollment(enrollment);
         }
 
