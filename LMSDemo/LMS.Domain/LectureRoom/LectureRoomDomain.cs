@@ -1,5 +1,5 @@
-﻿using LMS.Application.LectureRoom;
-using LMS.Models.DataModels;
+﻿using LMS.DataAccess.DataModels;
+using LMS.DataAccess.LectureRoom;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +10,8 @@ namespace LMS.Domain.LectureRoom
 {
     public class LectureRoomDomain : ILectureRoomDomain
     {
-        public ILectureRoomDataService LectureRoomDataService { get; set; }
-        public LectureRoomDomain(ILectureRoomDataService lectureRoomData)
+        public ILectureRoomDataLayer LectureRoomDataService { get; set; }
+        public LectureRoomDomain(ILectureRoomDataLayer lectureRoomData)
         {
             LectureRoomDataService = lectureRoomData;
         }

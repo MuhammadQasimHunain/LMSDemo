@@ -1,7 +1,5 @@
-﻿using LMS.Application.Course;
-using LMS.Application.LectureResource;
-using LMS.Application.LectureRoom;
-using LMS.Models.DataModels;
+﻿using LMS.DataAccess.DataModels;
+using LMS.Domain.LectureRoom;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -12,10 +10,10 @@ namespace LMSDemo.Controllers
     [ApiController]
     public class LectureRoomController : ControllerBase
     {
-        public ILectureRoomApplication LectureRoomApplication { get; set; }
-        public LectureRoomController(ILectureRoomApplication lectureRoomApplication)
+        public ILectureRoomDomain LectureRoomDomain { get; set; }
+        public LectureRoomController(ILectureRoomDomain lectureRoomDomain)
         {
-            LectureRoomApplication = lectureRoomApplication;
+            LectureRoomDomain = lectureRoomDomain;
         }
 
         [HttpGet]
@@ -23,7 +21,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRooms = LectureRoomApplication.GetLectureRoom();
+                var lectureRooms = LectureRoomDomain.GetLectureRoom();
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -46,7 +44,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = LectureRoomApplication.GetLectureRoom(id);
+                var lectureRoom = LectureRoomDomain.GetLectureRoom(id);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -69,7 +67,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = LectureRoomApplication.UpdateLectureRoom(model);
+                var lectureRoom = LectureRoomDomain.UpdateLectureRoom(model);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -92,7 +90,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = LectureRoomApplication.InsertLectureRoom(model);
+                var lectureRoom = LectureRoomDomain.InsertLectureRoom(model);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -115,7 +113,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = LectureRoomApplication.DeleteLectureRoom(id);
+                var lectureRoom = LectureRoomDomain.DeleteLectureRoom(id);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {

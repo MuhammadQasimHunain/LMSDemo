@@ -1,6 +1,5 @@
-﻿using LMS.Application.LectureRoom;
-using LMS.Application.Student;
-using LMS.Models.DataModels;
+﻿using LMS.DataAccess.DataModels;
+using LMS.Domain.Student;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -11,10 +10,10 @@ namespace LMSDemo.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        public IStudentApplication StudentApplication { get; set; }
-        public StudentController(IStudentApplication studentApplication)
+        public IStudentDomain StudentDomain { get; set; }
+        public StudentController(IStudentDomain studentDomain)
         {
-            StudentApplication = studentApplication;
+            StudentDomain = studentDomain;
         }
 
         [HttpGet]
@@ -22,7 +21,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var courses = StudentApplication.GetStudents();
+                var courses = StudentDomain.GetStudents();
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -46,7 +45,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = StudentApplication.GetStudent(id);
+                var lectureRoom = StudentDomain.GetStudent(id);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -69,7 +68,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = StudentApplication.UpdateStudent(model);
+                var lectureRoom = StudentDomain.UpdateStudent(model);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -92,7 +91,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = StudentApplication.InsertStudent(model);
+                var lectureRoom = StudentDomain.InsertStudent(model);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -115,7 +114,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = StudentApplication.DeleteStudent(id);
+                var lectureRoom = StudentDomain.DeleteStudent(id);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {

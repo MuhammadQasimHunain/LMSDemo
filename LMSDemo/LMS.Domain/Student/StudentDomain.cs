@@ -1,5 +1,5 @@
-﻿using LMS.Application.Student;
-using LMS.Models.DataModels;
+﻿using LMS.DataAccess.DataModels;
+using LMS.DataAccess.Student;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +10,8 @@ namespace LMS.Domain.Student
 {
     public class StudentDomain : IStudentDomain
     {
-        public IStudentDataService StudentDataService { get; set; }
-        public StudentDomain(IStudentDataService studentDataService)
+        public IStudentDataLayer StudentDataService { get; set; }
+        public StudentDomain(IStudentDataLayer studentDataService)
         {
             StudentDataService = studentDataService;
         }

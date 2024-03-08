@@ -1,4 +1,6 @@
-﻿using LMS.Models.DataModels;
+﻿using LMS.DataAccess.Shared;
+using LMS.DataAccess.DataModels;
+using LMS.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -6,25 +8,23 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LMS.Utils;
-using LMS.DataAccess.Shared;
 
-namespace LMS.Application.Course
+namespace LMS.DataAccess.LectureRoom
 {
-    public class CourseDataService : ICourseDataService
+    public class LectureRoomDataLayer : ILectureRoomDataLayer
     {
         private string ConnectionString;
-        public CourseDataService()
+        public LectureRoomDataLayer()
         {
             this.ConnectionString = Configuration.GetDBConfiguration();
         }
-        public bool DeleteCourse(int id)
+        public bool DeleteLectureRoom(int id)
         {
             try
             {
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
-                {   
-                    SqlCommand cmd = new SqlCommand(SQLQueries.DeleteCourse, con);
+                {
+                    SqlCommand cmd = new SqlCommand(SQLQueries.DeleteLectureRoom, con);
                     cmd.CommandType = CommandType.Text;
 
                     cmd.Parameters.AddWithValue("@ID", id);
@@ -41,30 +41,27 @@ namespace LMS.Application.Course
             }
         }
 
-        public CourseDBModel GetCourse(int id)
+        public LectureRoomDBModel GetLectureRoom(int id)
         {
             try
             {
-                CourseDBModel course = new CourseDBModel();
+                LectureRoomDBModel lectureRoom = new LectureRoomDBModel();
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
-                    string sqlQuery = SQLQueries.GetCourseByID.Replace("@ID",id.ToString());
+                    string sqlQuery = SQLQueries.GetLectureRoomByID.Replace("@ID",id.ToString());
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
-                    cmd.CommandType = CommandType.Text;
 
                     con.Open();
                     SqlDataReader rdr = cmd.ExecuteReader();
 
                     while (rdr.Read())
                     {
-
-                        course.ID = Convert.ToInt32(rdr["ID"]);
-                        course.Name = rdr["Name"].ToString();
-                        course.CreditUnits = Convert.ToInt32(rdr["CreditUnits"].ToString());
-                        course.Semester = Convert.ToInt32(rdr["Semester"].ToString());
+                        lectureRoom.ID = Convert.ToInt32(rdr["ID"]);
+                        lectureRoom.Name = rdr["Name"].ToString();
+                        lectureRoom.Capaicty = Convert.ToInt32(rdr["Capaicty"]);
                     }
                 }
-                return course;
+                return lectureRoom;
             }
             catch (Exception)
             {
@@ -72,13 +69,13 @@ namespace LMS.Application.Course
             }
         }
 
-        public IEnumerable<CourseDBModel> GetCourses()
+        public IEnumerable<LectureRoomDBModel> GetLectureRoom()
         {
-            List<CourseDBModel> lstcourse = new List<CourseDBModel>();
+            List<LectureRoomDBModel> lstLectureRooms = new List<LectureRoomDBModel>();
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
-                SqlCommand cmd = new SqlCommand(SQLQueries.GetAllCourses, con);
+                SqlCommand cmd = new SqlCommand(SQLQueries.GetAllLectureRoom, con);
                 cmd.CommandType = CommandType.Text;
 
                 con.Open();
@@ -86,34 +83,30 @@ namespace LMS.Application.Course
 
                 while (rdr.Read())
                 {
-                    CourseDBModel course = new CourseDBModel();
+                    LectureRoomDBModel lectureRoom = new LectureRoomDBModel();
 
-                    course.ID = Convert.ToInt32(rdr["ID"]);
-                    course.Name = rdr["Name"].ToString();
-                    course.CreditUnits = Convert.ToInt32(rdr["CreditUnits"].ToString());
-                    course.Semester = Convert.ToInt32(rdr["Semester"].ToString());
+                    lectureRoom.ID = Convert.ToInt32(rdr["ID"]);
+                    lectureRoom.Name = rdr["Name"].ToString();
+                    lectureRoom.Capaicty = Convert.ToInt32(rdr["Capaicty"]);
 
-                    lstcourse.Add(course);
+                    lstLectureRooms.Add(lectureRoom);
                 }
                 con.Close();
             }
-            return lstcourse;
+            return lstLectureRooms;
         }
 
-        public bool InsertCourse(CourseDBModel course)
+        public bool InsertLectureRoom(LectureRoomDBModel lectureRoom)
         {
             try
             {
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
-                    SqlCommand cmd = new SqlCommand(SQLQueries.InsertCourse, con);
+                    SqlCommand cmd = new SqlCommand(SQLQueries.InsertLectureRoom, con);
                     cmd.CommandType = CommandType.Text;
 
-                    cmd.Parameters.AddWithValue("@ID", course.ID);
-                    cmd.Parameters.AddWithValue("@Name", course.Name);
-                    cmd.Parameters.AddWithValue("@Semester", course.Semester);
-                    cmd.Parameters.AddWithValue("@CreditUnits", course.CreditUnits);
-
+                    cmd.Parameters.AddWithValue("@Name", lectureRoom.Name);
+                    cmd.Parameters.AddWithValue("@Capaicty", lectureRoom.Capaicty);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -127,19 +120,18 @@ namespace LMS.Application.Course
             }
         }
 
-        public bool UpdateCourse(CourseDBModel course)
+        public bool UpdateLectureRoom(LectureRoomDBModel lectureRoom)
         {
             try
             {
                 using (SqlConnection con = new SqlConnection(this.ConnectionString))
                 {
-                    SqlCommand cmd = new SqlCommand(SQLQueries.UpdateCourse, con);
+                    SqlCommand cmd = new SqlCommand(SQLQueries.InsertLectureRoom, con);
                     cmd.CommandType = CommandType.Text;
 
-                    cmd.Parameters.AddWithValue("@Name", course.Name);
-                    cmd.Parameters.AddWithValue("@Semester", course.Semester);
-                    cmd.Parameters.AddWithValue("@CreditUnits", course.CreditUnits);
-                    cmd.Parameters.AddWithValue("@ID", course.ID);
+                    cmd.Parameters.AddWithValue("@Name", lectureRoom.Name);
+                    cmd.Parameters.AddWithValue("@ID", lectureRoom.ID);
+                    cmd.Parameters.AddWithValue("@Capaicty", lectureRoom.Capaicty);
 
                     con.Open();
                     cmd.ExecuteNonQuery();

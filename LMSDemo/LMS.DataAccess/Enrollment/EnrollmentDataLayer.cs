@@ -1,5 +1,5 @@
 ﻿using LMS.DataAccess.Shared;
-using LMS.Models.DataModels;
+using LMS.DataAccess.DataModels;
 using LMS.Utils;
 using System;
 using System.Collections.Generic;
@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace LMS.DataAccess.Enrollment
 {
-    public class EnrollmentDataService : IEnrollmentDataService
+    public class EnrollmentDataLayer : IEnrollmentDataLayer
     {
         private string ConnectionString;
-        public EnrollmentDataService()
+        public EnrollmentDataLayer()
         {
             this.ConnectionString = Configuration.GetDBConfiguration();
         }

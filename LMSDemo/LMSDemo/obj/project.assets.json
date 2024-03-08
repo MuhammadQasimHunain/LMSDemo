@@ -234,25 +234,9 @@
           }
         }
       },
-      "LMS.Application/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "LMS.Domain": "1.0.0",
-          "LMS.Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/LMS.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LMS.Application.dll": {}
-        }
-      },
       "LMS.DataAccess/1.0.0": {
         "type": "project",
         "dependencies": {
-          "LMS.Logging": "1.0.0",
-          "LMS.Mapping": "1.0.0",
-          "LMS.Models": "1.0.0",
           "LMS.Utils": "1.0.0"
         },
         "compile": {
@@ -265,41 +249,13 @@
       "LMS.Domain/1.0.0": {
         "type": "project",
         "dependencies": {
-          "LMS.DataAccess": "1.0.0",
-          "LMS.Models": "1.0.0"
+          "LMS.DataAccess": "1.0.0"
         },
         "compile": {
           "bin/placeholder/LMS.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/LMS.Domain.dll": {}
-        }
-      },
-      "LMS.Logging/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/LMS.Logging.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LMS.Logging.dll": {}
-        }
-      },
-      "LMS.Mapping/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/LMS.Mapping.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LMS.Mapping.dll": {}
-        }
-      },
-      "LMS.Models/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/LMS.Models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LMS.Models.dll": {}
         }
       },
       "LMS.Utils/1.0.0": {
@@ -752,11 +708,6 @@
         "version.txt"
       ]
     },
-    "LMS.Application/1.0.0": {
-      "type": "project",
-      "path": "../LMS.Application/LMS.Application.csproj",
-      "msbuildProject": "../LMS.Application/LMS.Application.csproj"
-    },
     "LMS.DataAccess/1.0.0": {
       "type": "project",
       "path": "../LMS.DataAccess/LMS.DataAccess.csproj",
@@ -767,21 +718,6 @@
       "path": "../LMS.Domain/LMS.Domain.csproj",
       "msbuildProject": "../LMS.Domain/LMS.Domain.csproj"
     },
-    "LMS.Logging/1.0.0": {
-      "type": "project",
-      "path": "../LMS.Logging/LMS.Logging.csproj",
-      "msbuildProject": "../LMS.Logging/LMS.Logging.csproj"
-    },
-    "LMS.Mapping/1.0.0": {
-      "type": "project",
-      "path": "../LMS.Mapping/LMS.Mapping.csproj",
-      "msbuildProject": "../LMS.Mapping/LMS.Mapping.csproj"
-    },
-    "LMS.Models/1.0.0": {
-      "type": "project",
-      "path": "../LMS.Models/LMS.Models.csproj",
-      "msbuildProject": "../LMS.Models/LMS.Models.csproj"
-    },
     "LMS.Utils/1.0.0": {
       "type": "project",
       "path": "../LMS.Utils/LMS.Utils.csproj",
@@ -790,8 +726,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "LMS.Application >= 1.0.0",
-      "LMS.Models >= 1.0.0",
+      "LMS.Domain >= 1.0.0",
       "LMS.Utils >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "System.Data.SqlClient >= 4.8.6"
@@ -829,11 +764,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Application\\LMS.Application.csproj": {
-              "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Application\\LMS.Application.csproj"
-            },
-            "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj": {
-              "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Models\\LMS.Models.csproj"
+            "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Domain\\LMS.Domain.csproj": {
+              "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Domain\\LMS.Domain.csproj"
             },
             "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Utils\\LMS.Utils.csproj": {
               "projectPath": "C:\\Users\\qasim.hunain\\Documents\\LMSDemo\\LMSDemo\\LMS.Utils\\LMS.Utils.csproj"

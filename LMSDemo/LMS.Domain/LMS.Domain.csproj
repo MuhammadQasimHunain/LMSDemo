@@ -59,10 +59,6 @@
       <Project>{335c9e54-df91-46e0-9bb0-b1c513582581}</Project>
       <Name>LMS.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LMS.Models\LMS.Models.csproj">
-      <Project>{18CFF58C-60C2-40FF-B726-FB2E3520C75B}</Project>
-      <Name>LMS.Models</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

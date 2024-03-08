@@ -1,21 +1,20 @@
-﻿using LMS.Application.Course;
-using LMS.Application.LectureRoom;
-using LMS.DataAccess.Enrollment;
+﻿using LMS.DataAccess.Enrollment;
 using LMS.Domain.LectureRoom;
-using LMS.Models.DataModels;
+using LMS.DataAccess.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LMS.DataAccess.LectureRoom;
 
 namespace LMS.Domain.Enrollment
 {
     public class EnrollmentDomain : IEnrollmentDomain
     {
-        public IEnrollmentDataService EnrollmentDataService { get; set; }
-        public ILectureRoomDataService LectureRoomDataService { get; set; }
-        public EnrollmentDomain(IEnrollmentDataService enrollmentDataService, ILectureRoomDataService lectureRoomDataService)
+        public IEnrollmentDataLayer EnrollmentDataService { get; set; }
+        public ILectureRoomDataLayer LectureRoomDataService { get; set; }
+        public EnrollmentDomain(IEnrollmentDataLayer enrollmentDataService, ILectureRoomDataLayer lectureRoomDataService)
         {
             EnrollmentDataService = enrollmentDataService;
             LectureRoomDataService = lectureRoomDataService;

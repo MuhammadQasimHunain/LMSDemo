@@ -1,6 +1,5 @@
-﻿using LMS.Application.LectureResource;
-using LMS.Application.LectureRoom;
-using LMS.Models.DataModels;
+﻿using LMS.DataAccess.DataModels;
+using LMS.DataAccess.LectureResource;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +10,8 @@ namespace LMS.Domain.LectureResource
 {
     public class LectureResourceDomain : ILectureResourceDomain
     {
-        public ILectureResourceDataService LectureResourcDataService { get; set; }
-        public LectureResourceDomain(ILectureResourceDataService lectureResourcDataService)
+        public ILectureResourceDataLayer LectureResourcDataService { get; set; }
+        public LectureResourceDomain(ILectureResourceDataLayer lectureResourcDataService)
         {
             LectureResourcDataService = lectureResourcDataService;
         }

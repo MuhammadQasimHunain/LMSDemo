@@ -1,7 +1,7 @@
-﻿using LMS.Application.Course;
-using LMS.Application.Enrollment;
-using LMS.Application.Student;
-using LMS.Models.DataModels;
+﻿using LMS.DataAccess.DataModels;
+using LMS.Domain.Course;
+using LMS.Domain.Enrollment;
+using LMS.Domain.Student;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -9,10 +9,10 @@ namespace LMSDemo.Controllers
 {
     public class EnrollmentController : Controller
     {
-        public IEnrollmentApplication EnrollmentApplication { get; set; }
-        public EnrollmentController(IEnrollmentApplication enrollmentApplication)
+        public IEnrollmentDomain EnrollmentDomain { get; set; }
+        public EnrollmentController(IEnrollmentDomain enrollmentDomain)
         {
-            EnrollmentApplication = enrollmentApplication;
+            EnrollmentDomain = enrollmentDomain;
         }
 
 
@@ -21,7 +21,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = EnrollmentApplication.InsertEnrollment(model);
+                var lectureRoom = EnrollmentDomain.InsertEnrollment(model);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -45,7 +45,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = EnrollmentApplication.UpdateEnrollment(model);
+                var lectureRoom = EnrollmentDomain.UpdateEnrollment(model);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -69,7 +69,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var courses = EnrollmentApplication.GetEnrollments();
+                var courses = EnrollmentDomain.GetEnrollments();
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -92,7 +92,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = EnrollmentApplication.GetEnrollment(id);
+                var lectureRoom = EnrollmentDomain.GetEnrollment(id);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -115,7 +115,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = EnrollmentApplication.GetEnrollmentByStudent(id);
+                var lectureRoom = EnrollmentDomain.GetEnrollmentByStudent(id);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -138,7 +138,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureRoom = EnrollmentApplication.GetEnrollmentByCources(id);
+                var lectureRoom = EnrollmentDomain.GetEnrollmentByCources(id);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {

@@ -21,13 +21,7 @@ C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\LMS.Dat
 C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\LMS.DataAccess.pdb
 C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\EntityFramework.dll
 C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\LMS.Logging.dll
-C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\LMS.Mapping.dll
-C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\LMS.Models.dll
 C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\LMS.Utils.dll
-C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\LMS.Logging.pdb
-C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\LMS.Mapping.pdb
-C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\LMS.Models.pdb
 C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\LMS.Utils.pdb
 C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\EntityFramework.xml
 C:\Users\qasim.hunain\Documents\LMSDemo\LMSDemo\LMS.DataAccess\bin\Debug\EntityFramework.SqlServer.xml

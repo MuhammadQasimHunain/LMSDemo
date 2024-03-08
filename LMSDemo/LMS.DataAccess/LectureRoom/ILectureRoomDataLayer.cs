@@ -1,4 +1,4 @@
-﻿using LMS.Models.DataModels;
+﻿using LMS.DataAccess.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace LMS.Application.LectureRoom
+namespace LMS.DataAccess.LectureRoom
 {
-    public interface ILectureRoomDataService
+    public interface ILectureRoomDataLayer
     {
         IEnumerable<LectureRoomDBModel> GetLectureRoom();
         bool InsertLectureRoom(LectureRoomDBModel lectureRoom);

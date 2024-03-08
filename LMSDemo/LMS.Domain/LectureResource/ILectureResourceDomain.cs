@@ -1,4 +1,4 @@
-﻿using LMS.Models.DataModels;
+﻿using LMS.DataAccess.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

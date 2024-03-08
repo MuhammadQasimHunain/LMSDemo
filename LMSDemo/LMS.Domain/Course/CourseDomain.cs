@@ -1,5 +1,5 @@
-﻿using LMS.Application.Course;
-using LMS.Models.DataModels;
+﻿using LMS.DataAccess.Course;
+using LMS.DataAccess.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +10,8 @@ namespace LMS.Domain.Course
 {
     public class CourseDomain : ICourseDomain
     {
-        public ICourseDataService CourseDataService { get; set; }
-        public CourseDomain(ICourseDataService courseDataService)
+        public ICourseDataLayer CourseDataService { get; set; }
+        public CourseDomain(ICourseDataLayer courseDataService)
         {
             CourseDataService = courseDataService;
         }

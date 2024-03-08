@@ -1,13 +1,13 @@
-﻿using LMS.Models.DataModels;
+﻿using LMS.DataAccess.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LMS.Application.Course
+namespace LMS.DataAccess.Course
 {
-    public interface ICourseDataService
+    public interface ICourseDataLayer
     {
         IEnumerable<CourseDBModel> GetCourses();
         bool InsertCourse(CourseDBModel course);

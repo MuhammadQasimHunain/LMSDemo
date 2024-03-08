@@ -1,6 +1,5 @@
-﻿using LMS.Application.Course;
-using LMS.Models.DataModels;
-using Microsoft.AspNetCore.Http;
+﻿using LMS.DataAccess.DataModels;
+using LMS.Domain.Course;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Reflection;
@@ -11,10 +10,10 @@ namespace LMSDemo.Controllers
     [ApiController]
     public class CourseController : ControllerBase
     {
-        public ICourseApplication CourseApplication { get; set; }
-        public CourseController(ICourseApplication courseApplication)
+        public ICourseDomain CourseDomain { get; set; }
+        public CourseController(ICourseDomain courseDomain)
         {
-            CourseApplication = courseApplication;
+            CourseDomain = courseDomain;
         }
 
         [HttpGet]
@@ -22,7 +21,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var courses = CourseApplication.GetCourses();
+                var courses = CourseDomain.GetCourses();
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -45,7 +44,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var courses = CourseApplication.GetCourse(id);
+                var courses = CourseDomain.GetCourse(id);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -68,7 +67,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var courses = CourseApplication.UpdateCourse(model);
+                var courses = CourseDomain.UpdateCourse(model);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -91,7 +90,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var courses = CourseApplication.InsertCourse(model);
+                var courses = CourseDomain.InsertCourse(model);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -114,7 +113,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var courses = CourseApplication.DeleteCourse(id);
+                var courses = CourseDomain.DeleteCourse(id);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {

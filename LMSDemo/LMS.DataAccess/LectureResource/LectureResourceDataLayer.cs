@@ -1,5 +1,5 @@
 ﻿using LMS.DataAccess.Shared;
-using LMS.Models.DataModels;
+using LMS.DataAccess.DataModels;
 using LMS.Utils;
 using System;
 using System.Collections.Generic;
@@ -9,12 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LMS.Application.LectureResource
+namespace LMS.DataAccess.LectureResource
 {
-    public class LectureResourceDataService : ILectureResourceDataService
+    public class LectureResourceDataLayer : ILectureResourceDataLayer
     {
         private string ConnectionString;
-        public LectureResourceDataService()
+        public LectureResourceDataLayer()
         {
             this.ConnectionString = Configuration.GetDBConfiguration();
         }

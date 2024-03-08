@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\LMSDemo",
+    "\\LMSDemo\\LMS.Application",
+    "\\LMSDemo\\LMS.Application\\LectureRoom"
   ],
-  "SelectedNode": "\\C:\\Users\\qasim.hunain\\Documents\\LMSDemo",
+  "SelectedNode": "\\LMSDemo\\LMS.Application\\LectureRoom\\LectureRoomApplication.cs",
   "PreviewInSolutionExplorer": false
 }

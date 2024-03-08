@@ -1,6 +1,5 @@
-﻿using LMS.Application.Course;
-using LMS.Application.LectureResource;
-using LMS.Models.DataModels;
+﻿using LMS.DataAccess.DataModels;
+using LMS.Domain.LectureResource;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -12,10 +11,10 @@ namespace LMSDemo.Controllers
     public class LectureResourceController : ControllerBase
     {
 
-        public ILectureResourceApplication LectureResourceApplication { get; set; }
-        public LectureResourceController(ILectureResourceApplication lectureResourceApplication)
+        public ILectureResourceDomain LectureResourceDomain { get; set; }
+        public LectureResourceController(ILectureResourceDomain lectureResourceDomain)
         {
-            LectureResourceApplication = lectureResourceApplication;
+            LectureResourceDomain = lectureResourceDomain;
         }
 
         [HttpGet]
@@ -23,7 +22,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureResources = LectureResourceApplication.GetLectureResources();
+                var lectureResources = LectureResourceDomain.GetLectureResources();
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -47,7 +46,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureResource = LectureResourceApplication.GetLectureResource(id);
+                var lectureResource = LectureResourceDomain.GetLectureResource(id);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -70,7 +69,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureResource = LectureResourceApplication.UpdateLectureResource(model);
+                var lectureResource = LectureResourceDomain.UpdateLectureResource(model);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -93,7 +92,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureResource = LectureResourceApplication.InsertLectureResource(model);
+                var lectureResource = LectureResourceDomain.InsertLectureResource(model);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {
@@ -116,7 +115,7 @@ namespace LMSDemo.Controllers
         {
             try
             {
-                var lectureResource = LectureResourceApplication.DeleteLectureResource(id);
+                var lectureResource = LectureResourceDomain.DeleteLectureResource(id);
 
                 return StatusCode((int)HttpStatusCode.OK, new
                 {

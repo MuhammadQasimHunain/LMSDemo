@@ -1,9 +1,8 @@
-using LMS.Application.Course;
-using LMS.Application.Enrollment;
-using LMS.Application.LectureResource;
-using LMS.Application.LectureRoom;
-using LMS.Application.Student;
+using LMS.DataAccess.Course;
 using LMS.DataAccess.Enrollment;
+using LMS.DataAccess.LectureResource;
+using LMS.DataAccess.LectureRoom;
+using LMS.DataAccess.Student;
 using LMS.Domain.Course;
 using LMS.Domain.Enrollment;
 using LMS.Domain.LectureResource;
@@ -18,11 +17,6 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddTransient<IStudentApplication, StudentApplication>();
-builder.Services.AddTransient<ICourseApplication, CourseApplication>();
-builder.Services.AddTransient<ILectureResourceApplication, LectureResourceApplication>();
-builder.Services.AddTransient<IEnrollmentApplication, EnrollmentApplication>();
-builder.Services.AddTransient<ILectureRoomApplication, LectureRoomApplication>();
 
 builder.Services.AddTransient<IStudentDomain, StudentDomain>();
 builder.Services.AddTransient<ICourseDomain, CourseDomain>();
@@ -31,11 +25,11 @@ builder.Services.AddTransient<IEnrollmentDomain, EnrollmentDomain>();
 builder.Services.AddTransient<ILectureRoomDomain, LectureRoomDomain>();
 
 
-builder.Services.AddTransient<IStudentDataService, StudentDataService>();
-builder.Services.AddTransient<ICourseDataService, CourseDataService>();
-builder.Services.AddTransient<ILectureResourceDataService, LectureResourceDataService>();
-builder.Services.AddTransient<IEnrollmentDataService, EnrollmentDataService>();
-builder.Services.AddTransient<ILectureRoomDataService, LectureRoomDataService>();
+builder.Services.AddTransient<IStudentDataLayer, StudentDataLayer>();
+builder.Services.AddTransient<ICourseDataLayer, CourseDataLayer>();
+builder.Services.AddTransient<ILectureResourceDataLayer, LectureResourceDataLayer>();
+builder.Services.AddTransient<IEnrollmentDataLayer, EnrollmentDataLayer>();
+builder.Services.AddTransient<ILectureRoomDataLayer, LectureRoomDataLayer>();
 
 var app = builder.Build();
 

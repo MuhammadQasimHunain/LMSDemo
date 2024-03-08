@@ -8,8 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "LMSDemo/1.0.0": {
         "dependencies": {
-          "LMS.Application": "1.0.0",
-          "LMS.Models": "1.0.0",
+          "LMS.Domain": "1.0.0",
           "LMS.Utils": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3",
           "System.Data.SqlClient": "4.8.6"
@@ -140,20 +139,8 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "LMS.Application/1.0.0": {
-        "dependencies": {
-          "LMS.Domain": "1.0.0",
-          "LMS.Models": "1.0.0"
-        },
-        "runtime": {
-          "LMS.Application.dll": {}
-        }
-      },
       "LMS.DataAccess/1.0.0": {
         "dependencies": {
-          "LMS.Logging": "1.0.0",
-          "LMS.Mapping": "1.0.0",
-          "LMS.Models": "1.0.0",
           "LMS.Utils": "1.0.0"
         },
         "runtime": {
@@ -162,26 +149,10 @@
       },
       "LMS.Domain/1.0.0": {
         "dependencies": {
-          "LMS.DataAccess": "1.0.0",
-          "LMS.Models": "1.0.0"
+          "LMS.DataAccess": "1.0.0"
         },
         "runtime": {
           "LMS.Domain.dll": {}
-        }
-      },
-      "LMS.Logging/1.0.0": {
-        "runtime": {
-          "LMS.Logging.dll": {}
-        }
-      },
-      "LMS.Mapping/1.0.0": {
-        "runtime": {
-          "LMS.Mapping.dll": {}
-        }
-      },
-      "LMS.Models/1.0.0": {
-        "runtime": {
-          "LMS.Models.dll": {}
         }
       },
       "LMS.Utils/1.0.0": {
@@ -302,32 +273,12 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "LMS.Application/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "LMS.DataAccess/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "LMS.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "LMS.Logging/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "LMS.Mapping/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "LMS.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

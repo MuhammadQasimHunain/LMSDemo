@@ -1,4 +1,4 @@
-﻿using LMS.Models.DataModels;
+﻿using LMS.DataAccess.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LMS.DataAccess.Enrollment
 {
-    public interface IEnrollmentDataService
+    public interface IEnrollmentDataLayer
     {
         IEnumerable<EnrollmentDBModel> GetEnrollments();
         bool InsertEnrollment(EnrollmentDBModel enrollment);

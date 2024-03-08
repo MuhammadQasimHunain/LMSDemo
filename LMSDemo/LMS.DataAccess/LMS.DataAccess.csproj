@@ -52,32 +52,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Course\CourseDataService.cs" />
-    <Compile Include="Course\ICourseDataService.cs" />
-    <Compile Include="Enrollment\EnrollmentDataService.cs" />
-    <Compile Include="Enrollment\IEnrollmentDataService.cs" />
-    <Compile Include="LectureResource\ILectureResourceDataService.cs" />
-    <Compile Include="LectureResource\LectureResourceDataService.cs" />
-    <Compile Include="LectureRoom\ILectureRoomDataService.cs" />
-    <Compile Include="LectureRoom\LectureRoomDataService.cs" />
+    <Compile Include="Course\CourseDataLayer.cs" />
+    <Compile Include="Course\ICourseDataLayer.cs" />
+    <Compile Include="DataModels\Course.cs" />
+    <Compile Include="DataModels\Enrollment.cs" />
+    <Compile Include="DataModels\LectureResource.cs" />
+    <Compile Include="DataModels\LectureRoom.cs" />
+    <Compile Include="DataModels\Student.cs" />
+    <Compile Include="Enrollment\EnrollmentDataLayer.cs" />
+    <Compile Include="Enrollment\IEnrollmentDataLayer.cs" />
+    <Compile Include="LectureResource\ILectureResourceDataLayer.cs" />
+    <Compile Include="LectureResource\LectureResourceDataLayer.cs" />
+    <Compile Include="LectureRoom\ILectureRoomDataLayer.cs" />
+    <Compile Include="LectureRoom\LectureRoomDataLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shared\SQLQueries.cs" />
-    <Compile Include="Student\IStudentDataService.cs" />
-    <Compile Include="Student\StudentDataService.cs" />
+    <Compile Include="Student\IStudentDataLayer.cs" />
+    <Compile Include="Student\StudentDataLayer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LMS.Logging\LMS.Logging.csproj">
-      <Project>{22f8a4fa-2fec-4060-a31e-b5cbab8e9476}</Project>
-      <Name>LMS.Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LMS.Mapping\LMS.Mapping.csproj">
-      <Project>{6d212a36-8235-4fec-bf25-ddad95f195d4}</Project>
-      <Name>LMS.Mapping</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LMS.Models\LMS.Models.csproj">
-      <Project>{18cff58c-60c2-40ff-b726-fb2e3520c75b}</Project>
-      <Name>LMS.Models</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LMS.Utils\LMS.Utils.csproj">
       <Project>{916819be-f86f-4335-b139-cc8d4d23fa39}</Project>
       <Name>LMS.Utils</Name>
